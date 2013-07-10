@@ -16,7 +16,7 @@
         lbox (listbox :model (keys wallpapers))
         preview (label)
         layout (border-panel :center lbox :east preview)
-        f (frame :content layout :title "Wallpaper Manager" :on-close :hide)]
+        f (frame :content layout :title "Wallpaper Manager" :on-close :exit)]
     (listen lbox :selection #(config! preview :icon (wallpapers (selection %))))
     f))
 
