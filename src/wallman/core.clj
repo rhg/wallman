@@ -1,4 +1,4 @@
-(ns wallman.ncore
+(ns wallman.core
   (:use seesaw.core)
   (:gen-class)
   (:import hu.kazocsaba.imageviewer.ImageViewer
