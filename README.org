@@ -24,3 +24,38 @@ I'm using /hu.kazocsaba/imageview 1.2.3/.
     :dependences [[org.clojure/clojure "1.7.0"]
                   [hu.kazocsaba/imageview "1.2.3"]])
 #+end_src
+
+#+name: imports
+#+BEGIN_SRC clojure :exports none
+(import '[javax.swing JFrame])
+#+END_SRC
+
+** Main UI
+
+#+BEGIN_SRC clojure :noweb yes
+  (ns com.rhg135.wallman
+    (:import [javax.swing JFrame JPanel]))
+#+END_SRC
+ We'll just do one file here.
+
+#+BEGIN_SRC clojure
+  (defn pane-with-ui
+    [ui]
+    (doto (JFrame. "Wallman")
+      (.. getContentPane (add ui))
+      (.setDefaultCloseOperation JFrame/DISPOSE_ON_CLOSE)
+      (.pack)
+      (.setVisible true)))
+#+END_SRC
+
+We create a frame titled `Wallman`, add our ui, set it to destroy itself on close,
+pack it, and show it.
+
+As for the actual ui:
+
+#+BEGIN_SRC clojure
+  (defn panel-with-layout
+    [layout]
+    (doto (JPanel.)
+      (.setLayout layout)))
+#+END_SRC
