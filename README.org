@@ -1,5 +1,4 @@
-#+MACRO: version 1.0.0-SNAPSHOT
-#+TITLE: com.rhg135/wallman {{{version}}}
+#+TITLE: com.rhg135/wallman 1.0.0-SNAPSHOT
 #+AUTHOR: Ricardo Gomez
 #+TAGS: clojure code literate
 
