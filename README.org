@@ -1,0 +1,27 @@
+#+MACRO: version 1.0.0-SNAPSHOT
+#+TITLE: com.rhg135/wallman {{{version}}}
+#+AUTHOR: Ricardo Gomez
+#+TAGS: clojure code literate
+
+* Why?
+
+Because I utterly suck at code and I should probably implement anything that works to remedy this.
+Additionally, this seems simple enough and is actually useful.
+
+Useful? Well yes, while it's true that nitrogen has, and will continue to, satisfy my needs.
+this is just an exercise and a yak shave. My minor issue is that nitrogen
+relies on the mouse. I use i3, emacs, and vimperator; I'm not a mouse person.
+
+* Code
+
+I am using a library to display the image as swing scares me.
+I'm using /hu.kazocsaba/imageview 1.2.3/.
+#+TODO This should eventually be optional.
+
+** Project
+
+#+begin_src clojure :tangle project.clj
+  (defproject com.rhg135/wallman "1.0.0-SNAPSHOT"
+    :dependences [[org.clojure/clojure "1.7.0"]
+                  [hu.kazocsaba/imageview "1.2.3"]])
+#+end_src
